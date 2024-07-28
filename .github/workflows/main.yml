@@ -13,11 +13,21 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Set deploy path
-        run: echo "DEPLOYPATH=/home/uwjwmvgdaply/public_html/repositories" >> $GITHUB_ENV
-
+        run: echo "DEPLOYPATH=/home/uwjwmvgdaply/public_html/repositories/equatorangular" >> $GITHUB_ENV
+      
+      - name: Deploy to Godaddy
+        uses: actions/checkout@v2
+        with:
+         host: ${{ secrets.GODDADY_SSH_HOST }}
+         username: ${{ secrets.GODADDY_SSH_USERNAME }}
+         key: ${{ secrets.SSH_PRIVATE_KEY }}
+         port: 22
+         source: "."
+         target: "/home/uwjwmvgdaply/public_html/repositories/equatorangular"
+         
       - name: Copy files
         run: |
-          if [ -f "test.html" ]; then /bin/cp test.html $DEPLOYPATH; fi
+          if [ -f "index.html" ]; then sudo mkdir -p $DEPLOYPATH; sudo /bin/cp index.html $DEPLOYPATH; fi
         shell: /usr/bin/bash -e {0}
         env:
-          DEPLOYPATH: /home/uwjwmvgdaply/public_html/repositories
+          DEPLOYPATH: /home/uwjwmvgdaply/public_html/repositories/equatorangular
