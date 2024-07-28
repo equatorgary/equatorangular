@@ -20,4 +20,4 @@ jobs:
           if [ -f "test.html" ]; then /bin/cp test.html $DEPLOYPATH; fi
         shell: /usr/bin/bash -e {0}
         env:
-          DEPLOYPATH: /home/uwjwmvgdaply/public_html/repositories/equatorangular
+          DEPLOYPATH: /home/uwjwmvgdaply/public_html/repositories
