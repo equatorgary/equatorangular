@@ -16,7 +16,7 @@ jobs:
         run: echo "DEPLOYPATH=/home/uwjwmvgdaply/public_html/repositories/equatorangular" >> $GITHUB_ENV
       
       - name: Deploy to Godaddy
-        uses: appleyboy/scp-action@main
+        uses: actions/checkout@v2
         with:
          host: ${{ secrets.GODDADY_SSH_HOST }}
          username: ${{ secrets.GODADDY_SSH_USERNAME }}
