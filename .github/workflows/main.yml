@@ -1,0 +1,23 @@
+name: Deployment
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set deploy path
+        run: echo "DEPLOYPATH=/home/uwjwmvgdaply/public_html/repositories" >> $GITHUB_ENV
+
+      - name: Copy files
+        run: |
+          if [ -f "test.html" ]; then /bin/cp test.html $DEPLOYPATH; fi
+        shell: /usr/bin/bash -e {0}
+        env:
+          DEPLOYPATH: /home/uwjwmvgdaply/public_html/repositories
