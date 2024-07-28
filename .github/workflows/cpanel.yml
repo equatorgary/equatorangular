@@ -17,12 +17,6 @@ jobs:
 
       - name: Copy files
         run: |
-          if [ -d ".vscode" ]; then /bin/cp -R .vscode $DEPLOYPATH; fi
-          if [ -d "assets" ]; then /bin/cp -R assets $DEPLOYPATH; fi
-          if [ -d "css" ]; then /bin/cp -R css $DEPLOYPATH; fi
-          if [ -d "fonts" ]; then /bin/cp -R fonts $DEPLOYPATH; fi
-          if [ -d "img" ]; then /bin/cp -R img $DEPLOYPATH; fi
-          if [ -d "js" ]; then /bin/cp -R js $DEPLOYPATH; fi
           if [ -f "test.html" ]; then /bin/cp test.html $DEPLOYPATH; fi
         shell: /usr/bin/bash -e {0}
         env:
