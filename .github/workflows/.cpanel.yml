@@ -27,7 +27,7 @@ jobs:
          
       - name: Copy files
         run: |
-          if [ -f "index.html" ]; then mkdir -p $DEPLOYPATH; /bin/cp index.html $DEPLOYPATH; fi
+          if [ -f "index.html" ]; then sudo mkdir -p $DEPLOYPATH; sudo /bin/cp index.html $DEPLOYPATH; fi
         shell: /usr/bin/bash -e {0}
         env:
           DEPLOYPATH: /home/uwjwmvgdaply/public_html/repositories/equatorangular
