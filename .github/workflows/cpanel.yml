@@ -14,20 +14,19 @@ jobs:
 
       - name: Set deploy path
         run: echo "DEPLOYPATH=/home/uwjwmvgdaply/public_html/repositories/equatorangular" >> $GITHUB_ENV
-
-      - name: Create deploy directory
-        run: mkdir -p $DEPLOYPATH
-        env:
-          DEPLOYPATH: /home/uwjwmvgdaply/public_html/repositories/equatorangular
-
+      
+      - name: Deploy to Godaddy
+        uses: appleyboy/scp-action@main
+        with:
+         host: ${{ secrets.GODDADY_SSH_HOST }}
+         username: ${{ secrets.GODADDY_SSH_USERNAME }}
+         key: ${{ secrets.SSH_PRIVATE_KEY }}
+         port: 22
+         source: "."
+         target: "/home/uwjwmvgdaply/public_html/repositories/equatorangular"
+         
       - name: Copy files
         run: |
-          if [ -d ".vscode" ]; then /bin/cp -R .vscode $DEPLOYPATH; fi
-          if [ -d "assets" ]; then /bin/cp -R assets $DEPLOYPATH; fi
-          if [ -d "css" ]; then /bin/cp -R css $DEPLOYPATH; fi
-          if [ -d "fonts" ]; then /bin/cp -R fonts $DEPLOYPATH; fi
-          if [ -d "img" ]; then /bin/cp -R img $DEPLOYPATH; fi
-          if [ -d "js" ]; then /bin/cp -R js $DEPLOYPATH; fi
           if [ -f "test.html" ]; then /bin/cp test.html $DEPLOYPATH; fi
         shell: /usr/bin/bash -e {0}
         env:
