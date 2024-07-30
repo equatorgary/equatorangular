@@ -1,0 +1,10 @@
+<section class="eq-believe eq-section">
+    <div class="eq-container">
+        <h3 class="eq-section--heading">{{heading}}</h3>
+        <div class="eq-believe--boxes">
+            <div class="eq-believe--box" [attr.data-label]="item.label" *ngFor="let item of values;">
+                <img [src]="item.icon" alt="equator {{item.label}}" height="75">
+            </div>
+        </div>
+    </div>
+</section>

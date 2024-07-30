@@ -1,0 +1,12 @@
+@import '../../../../ui/style/base/mixins';
+.eq-customer {
+    &s {
+        @include flex($jc:center,$gap:30px);
+    }
+    &--box {
+        img {
+            height: 80px;
+            object-fit: fill;
+        }
+    }
+}

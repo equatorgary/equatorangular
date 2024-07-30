@@ -1,0 +1,10 @@
+<section class="eq-section">
+    <div class="eq-container">
+        <h3 class="eq-section--heading">Our Customers</h3>
+        <div class="eq-customers">
+            <span class="eq-customer--box" *ngFor="let item of customers">
+                <img [src]="item.image" alt="equator customer">
+            </span>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,13 @@
+@import '../../../../ui/style/base/mixins';
+.eq-believe {
+    &--box {
+        &es {
+            @include flex($jc:center, $gap:80px);
+        }
+        @include flex(column, $ai:center, $gap: 14px);
+        &:after {
+            content: attr(data-label);
+            @include text(uppercase);
+        }
+    }
+}

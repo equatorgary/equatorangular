@@ -1,0 +1,172 @@
+@import "./reuse";
+//Responsive
+@mixin responsive($type, $value) {
+    @media (#{$type}-width: $value) {
+        @content;
+    }
+}
+
+//Default Border
+@mixin border($width: 1px, $type: solid, $color: var(--border), $direction: null) {
+    border: $width $type $color;
+}
+
+//devices responsiveness
+@mixin devices($breakpoint) {
+    @if $breakpoint == "tablet" {
+        @media only screen and (max-width: 979px) {
+            @content;
+        }
+    }
+
+    @if $breakpoint == "mobile" {
+        @media only screen and (max-width: 767px) {
+            @content;
+        }
+    }
+}
+@mixin flex($d: row, $ai: initial, $jc: initial, $w: wrap, $gap: 0) {
+    @extend .k-flex;
+    @if $d == column {
+        @extend .k-flex-column;
+    }
+    @if $ai != initial {
+        @extend .k-ai-#{$ai}!optional;
+    }
+    @if $jc != initial {
+        @extend .k-jc-#{$jc} !optional;
+    }
+    @if $w == nowrap {
+        @extend .k-flex-nowrap;
+    }
+    @if $gap != 0 {
+        gap: $gap;
+    }
+}
+@mixin flexGrow() {
+    @extend .k-flex-grow;
+}
+@mixin textAlign($value) {
+    text-align: center;
+}
+
+
+//Position
+@mixin position($pos, $l: null, $r: null, $t: null, $b: null, $i: null) {
+    position: $pos;
+    left: $l;
+    top: $t;
+    bottom: $b;
+    right: $r;
+    z-index: $i;
+}
+//Translate
+@mixin Translate($x, $y) {
+    -webkit-transform: translate($x, $y);
+    -moz-transform: translate($x, $y);
+    -ms-transform: translate($x, $y);
+    -o-transform: translate($x, $y);
+    transform: translate($x, $y);
+}
+
+@mixin TranslateX($x) {
+    -webkit-transform: translateX($x);
+    -moz-transform: translateX($x);
+    -ms-transform: translateX($x);
+    -o-transform: translateX($x);
+    transform: translateX($x);
+}
+@mixin TranslateY($y) {
+    -webkit-transform: translateY($y);
+    -moz-transform: translateY($y);
+    -ms-transform: translateY($y);
+    -o-transform: translateY($y);
+    transform: translateY($y);
+}
+//Ellipse
+@mixin Ellipsis() {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+//Square Box
+@mixin Box($size, $type: null) {
+    width: $size;
+    height: $size;
+    @if $type == "circle" {
+        border-radius: 50%;
+    }
+    @if $type == "rounded" {
+        border-radius: 6px;
+    }
+}
+
+//Margin (in Rem)
+@mixin margin($all: initial, $x: initial, $y: initial, $l: initial, $t: initial, $r: initial, $b: initial) {
+    @if $all != initial {
+        margin: calc($all / $base-font-size * 1rem);
+    }
+    @if $x != initial {
+        margin-left: calc($x / $base-font-size * 1rem);
+        margin-right: calc($x / $base-font-size * 1rem);
+    }
+    @if $y != initial {
+        margin-top: calc($y / $base-font-size * 1rem);
+        margin-bottom: calc($y / $base-font-size * 1rem);
+    }
+    @if $l != initial {
+        margin-left: calc($l / $base-font-size * 1rem);
+    }
+    @if $r != initial {
+        margin-right: calc($r / $base-font-size * 1rem);
+    }
+    @if $b != initial {
+        margin-bottom: calc($b / $base-font-size * 1rem);
+    }
+    @if $t != initial {
+        margin-top: calc($t / $base-font-size * 1rem);
+    }
+}
+//Padding (in Rem)
+@mixin padding($all: initial, $x: initial, $y: initial, $l: initial, $t: initial, $r: initial, $b: initial) {
+    @if $all != initial {
+        padding: calc($all / $base-font-size * 1rem);
+    }
+    @if $x != initial {
+        padding-left: calc($x / $base-font-size * 1rem);
+        padding-right: calc($x / $base-font-size * 1rem);
+    }
+    @if $y != initial {
+        padding-top: calc($y / $base-font-size * 1rem);
+        padding-bottom: calc($y / $base-font-size * 1rem);
+    }
+    @if $l != initial {
+        padding-left: calc($l / $base-font-size * 1rem);
+    }
+    @if $r != initial {
+        padding-right: calc($r / $base-font-size * 1rem);
+    }
+    @if $b != initial {
+        padding-bottom: calc($b / $base-font-size * 1rem);
+    }
+    @if $t != initial {
+        padding-top: calc($t / $base-font-size * 1rem);
+    }
+}
+$base-font-size: 16px;
+@mixin font-size($value) {
+    font-size: calc($value / $base-font-size * 1rem);
+}
+@mixin color($value) {
+    @extend .color-#{$value} !optional;
+}
+@mixin background($value) {
+    @extend .bg-#{$value} !optional;
+}
+@mixin text($value){
+    @if $value == uppercase {
+        @extend .text-uppercase;
+    }
+}
+
