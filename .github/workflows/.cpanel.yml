@@ -1,33 +1,20 @@
-name: Deployment
-
-on:
+on: 
   push:
     branches:
       - main
-
+name: 🚀 Deploy website on push
 jobs:
-  deploy:
+  web-deploy:
+    name: 🎉 Deploy
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
-      - name: Set deploy path
-        run: echo "DEPLOYPATH=/home/uwjwmvgdaply/public_html/repositories/equatorangular" >> $GITHUB_ENV
-      
-      - name: Deploy to Godaddy
-        uses: actions/checkout@v2
-        with:
-         host: ${{ secrets.GODDADY_SSH_HOST }}
-         username: ${{ secrets.GODADDY_SSH_USERNAME }}
-         key: ${{ secrets.SSH_PRIVATE_KEY }}
-         port: 22
-         source: "."
-         target: "/home/uwjwmvgdaply/public_html/repositories/equatorangular"
-         
-      - name: Copy files
-        run: |
-          if [ -f "index.html" ]; then sudo mkdir -p $DEPLOYPATH; sudo /bin/cp index.html $DEPLOYPATH; fi
-        shell: /usr/bin/bash -e {0}
-        env:
-          DEPLOYPATH: /home/uwjwmvgdaply/public_html/repositories/equatorangular
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v4
+    
+    - name: 📂 Sync files
+      uses: equatorapps/FTP-Deploy-Action@v4.3.5
+      with:
+        server: ftp.equatorapps.com
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        server-dir: /home/uwjwmvgdaply/public_html/repositories/equatorangular/
