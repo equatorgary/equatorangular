@@ -17,4 +17,4 @@ jobs:
         server: 208.109.41.81
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
-        server-dir: /home/uwjwmvgdaply/public_html/repositories/equatorangular/
+        server-dir: /repositories/equatorangular/
