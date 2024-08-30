@@ -1,0 +1,11 @@
+:root {
+    --border-color: #dddddd;
+    --white: #ffffff;
+    --black: #1C1C1C;
+    /*Theme*/
+    --primary: #196742;
+    --accent: #1E73BE;
+    --accent-light: #4F8EC5;
+    --dark: var(--black);
+    /**/
+}
