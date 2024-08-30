@@ -206,6 +206,11 @@
     },
     "ui": {
       "projectType": "library",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
       "root": "projects/ui",
       "sourceRoot": "projects/ui/src",
       "prefix": "lib",
@@ -217,7 +222,7 @@
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/ui/tsconfig.lib.prod.json"
+              "tsConfig": "projects/ui/tsconfig.lib.prod.json",
             },
             "development": {
               "tsConfig": "projects/ui/tsconfig.lib.json"
@@ -239,9 +244,14 @@
     },
     "shared": {
       "projectType": "library",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
       "root": "projects/shared",
       "sourceRoot": "projects/shared/src",
-      "prefix": "lib",
+      "prefix": "eq",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
@@ -253,7 +263,7 @@
               "tsConfig": "projects/shared/tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "projects/shared/tsconfig.lib.json"
+              "tsConfig": "projects/shared/tsconfig.lib.json",
             }
           },
           "defaultConfiguration": "production"
@@ -262,6 +272,7 @@
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
             "tsConfig": "projects/shared/tsconfig.spec.json",
+            "inlineStyleLanguage": "scss",
             "polyfills": [
               "zone.js",
               "zone.js/testing"

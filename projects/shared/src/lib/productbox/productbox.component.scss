@@ -1,0 +1,8 @@
+// @import '../../../../ui/style/base/mixins';
+// .eq-productbox {
+//     @include flex(column);
+// }
+@use '../../../../ui/style/base/mixins' as mix;
+.eq-productbox {
+    @include mix.flex(column);
+}

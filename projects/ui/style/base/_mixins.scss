@@ -26,7 +26,10 @@
     }
 }
 @mixin flex($d: row, $ai: initial, $jc: initial, $w: wrap, $gap: 0) {
-    @extend .k-flex;
+   
+    @if $d == row {
+        @extend .k-flex;
+    }
     @if $d == column {
         @extend .k-flex-column;
     }
