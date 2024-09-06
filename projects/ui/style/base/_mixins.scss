@@ -162,14 +162,17 @@ $base-font-size: 16px;
     font-size: calc($value / $base-font-size * 1rem);
 }
 @mixin color($value) {
-    @extend .color-#{$value} !optional;
+    @extend .color-#{""+$value+""} !optional;
 }
 @mixin background($value) {
-    @extend .bg-#{$value} !optional;
+    @extend .bg-#{""+$value+""} !optional;
 }
 @mixin text($value){
     @if $value == uppercase {
         @extend .text-uppercase;
     }
+}
+@mixin textAlign($value){
+    @extend .text-#{""+$value+""};
 }
 

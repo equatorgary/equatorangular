@@ -1,1 +1,10 @@
-<eq-productbox *ngFor="let item of productlist" [image]="item?.image" [name]="item?.name" [price]="item?.price"></eq-productbox>
+<Container>
+    <Heading tag="h3" text="BEST SELLING PRODUCTS" subtext="With Equator Advanced Appliances"/>
+    <Grid desktop="4" mobile="1">
+        <ng-container *ngFor="let item of productlist">
+            <Grid-col>
+                <eq-productbox [image]="item.image" [name]="item.name" [price]="item.price"></eq-productbox>
+            </Grid-col>
+        </ng-container>
+    </Grid>
+</Container>

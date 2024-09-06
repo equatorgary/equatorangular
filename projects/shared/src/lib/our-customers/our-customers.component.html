@@ -1,0 +1,21 @@
+<section class="eq-customer eq-section">
+    <Container>
+        <Heading tag="h3" text="{{heading}}" />
+        <ul class="eq-customer--list">
+            <li *ngFor="let item of customers"><img [src]="item.customer" alt="customer"></li>
+        </ul>
+    </Container>
+</section>
+<!-- <section class="eq-customer eq-section">
+    <Container>
+        <Heading tag="h3" text="{{heading}}" />
+        <div></div>
+        <div class="eq-customer--con">
+            <span class="eq-customer--prev" (click)="prevSlide()">&lt;</span>
+            <div class="eq-customer--list" [style.transform]="'translateX(' + translateX + '%)'">
+                <span *ngFor="let item of customers"><img [src]="item.customer" alt="customer"></span>
+            </div>
+            <span class="eq-customer--next" (click)="nextSlide()">&gt;</span>
+        </div>
+    </Container>
+</section> -->

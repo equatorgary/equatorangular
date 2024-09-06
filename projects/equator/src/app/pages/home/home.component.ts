@@ -1,12 +1,10 @@
 import { Component } from '@angular/core';
-import { SliderComponent } from "../../../../../shared/src/lib/slider/slider.component";
-import { HomeBelieveComponent } from "../../../../../shared/src/lib/home-believe/home-believe.component";
-import { BestSellingComponent } from "../../../../../shared/src/lib/best-selling/best-selling.component";
+import { OurCustomersComponent, BestSellingComponent, HomeBelieveComponent, SliderComponent, FeatureVideosComponent } from '../../../../../shared/src/public-api';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [SliderComponent, HomeBelieveComponent, BestSellingComponent],
+  imports: [SliderComponent, HomeBelieveComponent, BestSellingComponent, OurCustomersComponent,FeatureVideosComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

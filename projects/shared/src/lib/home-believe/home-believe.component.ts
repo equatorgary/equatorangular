@@ -1,10 +1,11 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ContainerComponent, HeadingComponent } from '../../../../ui/src/public-api';
 
 @Component({
   selector: 'eq-home-believe',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ContainerComponent, HeadingComponent],
   templateUrl: './home-believe.component.html',
   styleUrls: ['./home-believe.component.scss']
 })

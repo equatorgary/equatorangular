@@ -3,10 +3,18 @@
     &-section {
         @include padding($y: 80px);
         &--heading {
-            @include font-size(18px);
+            @include font-size(24px);
             @include text(uppercase);
-            @include flex($jc:center);
+            @include flex(column,$jc:center, $gap:6px);
             @include margin($b: 30px);
+            @include textAlign(center);
+            @include color(accent);
+        }
+        &--subheading {
+            @include font-size(16px);
+            font-style: italic;
+            @include color(black);
+            text-transform: initial;
         }
     }
     &-container {

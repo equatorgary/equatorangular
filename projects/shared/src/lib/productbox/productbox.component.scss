@@ -1,8 +1,15 @@
-// @import '../../../../ui/style/base/mixins';
-// .eq-productbox {
-//     @include flex(column);
-// }
 @use '../../../../ui/style/base/mixins' as mix;
 .eq-productbox {
-    @include mix.flex(column);
+    @include mix.flex(column, $ai:center, $gap:16px);
+    &--image {
+        height: 270px;
+    }
+    &--info {
+        @include mix.flex(column, $gap:10px);
+        @include mix.textAlign(center);
+    }
+    &--price {
+        @include mix.font-size(16px);
+        font-weight: 600;
+    }
 }

@@ -103,6 +103,7 @@
 }
 $colors: (
   white: var(--white),
+  black: var(--black),
   primary: var(--primary),
   primary-dark: var(--primary-dark),
   primary-light: var(--primary-light),
@@ -121,12 +122,12 @@ $colors: (
   accent: var(--accent)
 );
 @each $item, $value in $colors {
-    .bg-#{$item} {
+    .bg-#{""+$item+""} {
       background-color: $value;
     }
   }
   @each $item, $value in $colors {
-    .color-#{$item} {
+    .color-#{""+$item+""} {
       color: $value;
     }
   }

@@ -1,0 +1,18 @@
+@import '../../../../ui/style/base/mixins';
+.eq-customer {
+    &--con {
+        @include flex($gap:20px, $ai:center,$jc:center);
+    }
+    &--list {
+        list-style: none;
+        @include flex($gap: 100px,$ai:center,$jc:center);
+        position: relative;
+        overflow: hidden;
+        padding: 0;
+        @include flexGrow();
+    }
+    &--next,&--prev {
+        @include font-size(20px);
+        cursor: pointer;
+    }
+}
