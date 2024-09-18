@@ -1,0 +1,12 @@
+<eq-page-header [title]="categoryData.name" [text]="categoryData.description"></eq-page-header>
+<Container>
+<div class="eq-category--content">
+    <Grid desktop="4" mobile="1" gap="20px">
+        <ng-container *ngFor="let item of productlist">
+            <Grid-col>
+                <eq-productbox [image]="item.image" [name]="item.name" [price]="item.price" [rating]="item.rating"></eq-productbox>
+            </Grid-col>
+        </ng-container>
+    </Grid>
+</div>
+</Container>

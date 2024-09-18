@@ -14,9 +14,9 @@ export class HeaderComponent {
 @Input() design?: number = 1;
 @Input() logo?: any= '';
 menu:any= [
-  {menuname: 'Home', link: ''},
+  {menuname: 'Home', link: '/'},
   {menuname: 'About', link: ''},
-  {menuname: 'Products', link: ''},
+  {menuname: 'Products', link: '/category?name=products'},
   {menuname: 'Application', link: ''},
   {menuname: 'Reviews', link: ''},
   {menuname: 'Dealer', link: ''},

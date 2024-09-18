@@ -1,7 +1,7 @@
 @use '../../../style/base/mixins' as mix;
 .uiGrid {
     display: grid;
-    gap: 1rem;  
+    gap: var(--gap);  
     grid-template-columns: repeat(var(--desktop), 1fr);
     @include mix.responsive(max,767px){
         grid-template-columns: repeat(var(--mobile), 1fr);

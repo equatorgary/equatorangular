@@ -1,0 +1,19 @@
+.breadcrumb {
+    background-color: transparent;
+    padding: 8px 0;
+  }
+  
+  .breadcrumb > a:after {
+    content: '>';
+    padding: 0 8px;
+    color: #6c757d;
+  }
+  
+  .breadcrumb-item a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .breadcrumb-item.active {
+    color: #6c757d;
+  }

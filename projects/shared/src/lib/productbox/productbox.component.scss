@@ -12,4 +12,17 @@
         @include mix.font-size(16px);
         font-weight: 600;
     }
+    &--rating {
+        @include mix.flex(row,$ai:center,$gap:4px);
+        margin-left: auto;
+        margin-right: auto;
+        .fa {
+            &.filled {
+                @include mix.color(accent);
+            }
+            &.unfilled {
+                @include mix.color(text-light);
+            }
+        }
+    }
 }

@@ -1,0 +1,11 @@
+<header class="eq-pageheader">
+    <Container>
+        <div class="eq-pageheader--con">
+        <h2 class="eq-pageheader--title">
+            {{title}}
+            <em class="eq-pageheader--text" *ngIf="text != 'Text'">{{text}}</em>
+        </h2>
+        <Breadcrumbs *ngIf="breadcrumbs"></Breadcrumbs>
+        </div>
+    </Container>
+</header>

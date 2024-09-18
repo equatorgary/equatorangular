@@ -1,0 +1,23 @@
+@use '../../../../ui/style/base/mixins' as mix;
+.eq-video {
+    &--thumb {
+        @include mix.flex(column,$gap:10px);
+        @include mix.position(relative);
+    }
+    &--img {
+        @include mix.background(bg-light);
+        @include mix.padding(20px);
+        width: 100%;
+        border-radius: 10px;
+    }
+    &--icon {
+        width: 60px;
+        height: 40px;
+        background: #ff0000;
+        @include mix.color(white);
+        border-radius: 6px;
+        @include mix.flex($ai:center,$jc:center);
+        @include mix.position(absolute,$t:100px,$l:50%);
+        transform: translateX(-50%);
+    }
+}

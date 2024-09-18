@@ -11,6 +11,7 @@ import { Component, Inject, Input, PLATFORM_ID } from '@angular/core';
 export class GridComponent {
   @Input() desktop: any = 12;
   @Input() mobile: any = 6;
+  @Input() gap?: any;
   isDesktop: boolean = true;
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {

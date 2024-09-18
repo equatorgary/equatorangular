@@ -1,0 +1,6 @@
+<nav class="breadcrumb">
+    <a routerLink="/">Home</a>
+    <span *ngIf="categoryName" class="breadcrumb-item active" aria-current="page">
+      {{ categoryName | titlecase }}  <!-- Capitalize the first letter of the category name -->
+    </span>
+  </nav>

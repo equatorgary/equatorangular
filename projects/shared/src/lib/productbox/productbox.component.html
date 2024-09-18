@@ -2,6 +2,14 @@
     <img [src]="image" alt="{{name}} image" class="eq-productbox--image">
     <span class="eq-productbox--info">
         <figcaption class="eq-productbox--name">{{name}}</figcaption>
+        <span class="eq-productbox--rating" *ngIf="rating">
+            <i
+            *ngFor="let star of stars"
+            class="fa fa-star"
+            [ngClass]="{'filled': star <= rating, 'unfilled': star > rating}"
+          ></i>
+          {{rating}}.0 ({{rating}})
+        </span>
         <span class="eq-productbox--price">{{price}}</span>
     </span>
 </figure>

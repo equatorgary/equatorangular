@@ -1,0 +1,22 @@
+@use '../../../../ui/style/base/mixins' as mix;
+.eq-pageheader {
+    border-bottom: 1px solid var(--border-color);
+    @include mix.margin($b:16px);
+    transform: translateY(-2px);
+    background: white;
+    &--con {
+        @include mix.flex($jc:between);
+        @include mix.padding($y:16px);
+    }
+    &--title {
+        @include mix.flex(column);
+        @include mix.flexGrow();
+        @include mix.color(secondary);
+        font-size: 22px;
+    }
+    &--text {
+        font-size: 13px;
+        @include mix.color(text-light);
+        font-weight: normal;
+    }
+}
