@@ -5,7 +5,7 @@
         @include mix.position(relative);
     }
     &--img {
-        @include mix.background(bg-light);
+        @include mix.background(light);
         @include mix.padding(20px);
         width: 100%;
         border-radius: 10px;

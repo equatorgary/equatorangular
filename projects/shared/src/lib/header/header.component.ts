@@ -15,13 +15,13 @@ export class HeaderComponent {
 @Input() logo?: any= '';
 menu:any= [
   {menuname: 'Home', link: '/'},
-  {menuname: 'About', link: ''},
+  {menuname: 'About', link: '/about'},
   {menuname: 'Products', link: '/category?name=products'},
   {menuname: 'Application', link: ''},
-  {menuname: 'Reviews', link: ''},
-  {menuname: 'Dealer', link: ''},
+  {menuname: 'Reviews', link: '/reviews'},
+  {menuname: 'Dealer', link: '/dealer'},
   {menuname: 'Media', link: ''},
-  {menuname: 'Warranty', link: ''},
+  {menuname: 'Warranty', link: '/warranty'},
   {menuname: 'Contact', link: ''},
 ];
 onItemSelected(item: string) {

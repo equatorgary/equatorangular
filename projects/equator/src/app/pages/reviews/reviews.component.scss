@@ -1,0 +1,35 @@
+@use '../../../../../ui/style/base/mixins' as mix;
+
+.eq-review{
+    &--list{
+        list-style: none;
+        padding: 0;
+        margin:0;
+        margin-bottom: 20px;
+    }
+    &--box{
+        @include mix.flex(column,$gap:12px);
+        @include mix.padding(30px);
+        border: 1px solid var(--border-color);
+        border-radius: 6px;
+        &:is(:hover,:focus){
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+        border-bottom: 3px solid var(--accent);
+        @include mix.margin($b:20px);
+    }
+    &--user {
+        @include mix.font-size(14px);
+        display: inline-block;
+        @include mix.padding($y:8px,$x:16px);
+        @include mix.background(light);
+        max-width: max-content;
+        border-radius: 30px;
+        font-weight: 600;
+    }
+    &--text {
+        @include mix.font-size(17px);
+        margin-bottom: 0;
+        line-height: 1.5;
+    }
+}

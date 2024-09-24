@@ -1,0 +1,31 @@
+@use '../../../../../ui/style/base/mixins' as mix;
+.eq-about {
+    &--section {
+        @include mix.flex($w:nowrap, $gap: 20px,$ai:start);
+        &.right{
+            flex-direction: row-reverse;
+        }
+        &:not(:last-child){
+            @include mix.margin($b: 30px);
+        }
+    }
+    &--title {
+        @include mix.font-size(18px);
+        @include mix.padding($b:16px);
+        @include mix.color(accent-dark);
+        text-transform: uppercase;
+        border-bottom: 1px solid var(--border-color);
+    }
+    &--text {
+        @include mix.font-size(17px);
+        line-height: 2;
+    }
+    &--img {
+        flex-shrink: 0;
+        width: 360px;
+        box-shadow: 0 0 5px rgba(0,0,0,.1);
+        background-color: white;
+        border-radius: 6px;
+        border: 5px solid white;
+    }
+}
