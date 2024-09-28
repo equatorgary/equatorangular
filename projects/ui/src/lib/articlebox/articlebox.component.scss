@@ -1,0 +1,24 @@
+@use '../../../style/base/mixins' as mix;
+.eq-press{
+    &--list{
+        @include mix.flex(column);
+    }
+    &--box {
+        @include mix.flex($w:nowrap,$gap:10px);
+        @include mix.padding(16px);
+        @include mix.margin($b:12px);
+        border:1px solid var(--border-color);
+        border-radius: 10px;
+        &:is(:hover,:focus) {
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+    }
+    &--info {
+        @include mix.flex(column,$gap:10px);
+        @include mix.flexGrow();
+    }
+    &--date {
+        @include mix.color(text-light);
+        font-style: italic;
+    }
+}

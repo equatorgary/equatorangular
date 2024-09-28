@@ -1,0 +1,22 @@
+@use '../../../../../ui/style/base/mixins' as mix;
+.eq-media {
+    &--wrap {
+        @include mix.flex($gap:30px);
+        @include mix.position(relative);
+        @include mix.padding($y:30px);
+    }
+    &--nav {
+        @include mix.flex(column,$gap:16px,$ai:start);
+        &link {
+            @include mix.padding($y:8px,$x:16px);
+            border-radius: 20px;
+            &.active {
+                @include mix.background(primary);
+                @include mix.color(white);
+            }
+        }
+    }
+    &--content {
+        @include mix.flexGrow();
+    }
+}

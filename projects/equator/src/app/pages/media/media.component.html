@@ -1,0 +1,15 @@
+<eq-page-header [title]="pageTitle"></eq-page-header>
+<Container>
+    <div class="eq-media--wrap">
+        <nav class="eq-media--nav">
+            <a class="eq-media--navlink" *ngFor="let item of media" (click)="nav(item.id,item.name)" [ngClass]="currentNav == item.id? 'active':''">{{item.name}}</a>
+        </nav>
+        <div class="eq-media--content">
+            <app-press-release *ngIf="currentNav == 1"></app-press-release>
+            <app-awards *ngIf="currentNav == 2"></app-awards>
+            <app-video *ngIf="currentNav == 3"></app-video>
+            <app-news *ngIf="currentNav == 4"></app-news>
+            <app-advertisement *ngIf="currentNav == 5"></app-advertisement>
+        </div>
+    </div>
+</Container>

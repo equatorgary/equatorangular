@@ -1,0 +1,9 @@
+<div class="eq-press--box">
+    <img [src]="image" *ngIf="image != ''" alt="new press release" width="240">
+    <div class="eq-press--info">
+        <h4 class="eq-press--heading">{{heading}}</h4>
+        <time class="eq-press--date" *ngIf="date != ''">{{date}}</time>
+        <p class="eq-press--text" *ngIf="text != ''">{{text}}</p>
+        <a [routerLink]="buttonLink" class="eq-btn eq-btn--light" *ngIf="showButton">{{buttonText}}</a>
+    </div>
+</div>

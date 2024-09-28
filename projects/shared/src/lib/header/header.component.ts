@@ -20,9 +20,9 @@ menu:any= [
   {menuname: 'Application', link: ''},
   {menuname: 'Reviews', link: '/reviews'},
   {menuname: 'Dealer', link: '/dealer'},
-  {menuname: 'Media', link: ''},
+  {menuname: 'Media', link: '/media'},
   {menuname: 'Warranty', link: '/warranty'},
-  {menuname: 'Contact', link: ''},
+  {menuname: 'Contact', link: '/contact-us'},
 ];
 onItemSelected(item: string) {
   console.log('Selected item:', item);

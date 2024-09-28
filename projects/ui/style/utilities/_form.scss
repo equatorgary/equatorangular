@@ -36,3 +36,9 @@ transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 appearance: none;
     }
 }
+.eq-checkbox{
+    @include mix.flex($gap:6px,$ai:center);
+    &es{
+        @include mix.flex($gap:10px);
+    }
+}
