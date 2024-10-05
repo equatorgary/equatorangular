@@ -1,0 +1,24 @@
+@use '../../../style/base/mixins' as mix;
+.eq-tab {
+    &s{
+        @include mix.flex(column);
+        border: 1px solid var(--border-color);
+        border-radius: 10px 10px;
+        &--nav {
+            @include mix.flex($gap:10px);
+            border-bottom: 1px solid var(--border-color);
+            &link {
+                @include mix.padding(16px);
+                border-bottom: 3px solid transparent;
+                &.active {
+                    border-bottom-color: var(--accent);
+                    font-weight: 600;
+                    @include mix.color(--accent);
+                }
+            }
+        }
+        &--body {
+            @include mix.padding(16px);
+        }
+    }
+}

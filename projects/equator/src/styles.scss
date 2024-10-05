@@ -1,2 +1,42 @@
 /* You can add global styles to this file, and also import other style files */
 @import '../../ui/style/fontawesome/all.min.css';
+.skeleton-loader {
+    .skeleton {
+      background-color: #ddd;
+      border-radius: 4px;
+      margin-bottom: 10px;
+      animation: pulse 1.5s infinite ease-in-out;
+    }
+  
+    .skeleton-title {
+      height: 24px;
+      width: 60%;
+    }
+  
+    .skeleton-image {
+      height: 200px;
+      width: 100%;
+    }
+  
+    .skeleton-text {
+      height: 16px;
+      width: 90%;
+    }
+  
+    @keyframes pulse {
+      0% {
+        background-color: #eee;
+      }
+      50% {
+        background-color: #ccc;
+      }
+      100% {
+        background-color: #eee;
+      }
+    }
+  }
+  
+  .error-message {
+    color: red;
+    font-weight: bold;
+  }

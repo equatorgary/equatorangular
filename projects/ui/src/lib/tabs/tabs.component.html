@@ -1,0 +1,10 @@
+<div class="eq-tabs">
+    <nav class="eq-tabs--nav">
+        <a class="eq-tabs--navlink" *ngFor="let tab of tabs" (click)="selectTab(tab)" [class.active]="tab.active">
+            {{ tab.heading }}
+        </a>
+    </nav>
+    <div class="eq-tabs--body">
+        <ng-content></ng-content>
+    </div>
+  </div>

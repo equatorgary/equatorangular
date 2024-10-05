@@ -4,7 +4,7 @@
     <Grid desktop="4" mobile="1" gap="20px">
         <ng-container *ngFor="let item of productlist">
             <Grid-col>
-                <eq-productbox [image]="item.image" [name]="item.name" [price]="item.price" [rating]="item.rating"></eq-productbox>
+                <eq-productbox [image]="item.image" [name]="item.name" [price]="item.price" [rating]="item.rating" link="/product/{{item.category}}/{{item.id}}"></eq-productbox>
             </Grid-col>
         </ng-container>
     </Grid>

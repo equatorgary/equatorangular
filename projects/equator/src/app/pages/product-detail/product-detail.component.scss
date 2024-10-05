@@ -1,0 +1,56 @@
+@use '../../../../../ui/style/base/mixins' as mix;
+.eq-product {
+    @include mix.flex(column, $gap: 60px);
+    @include mix.padding(30px);
+    line-height: 1.5;
+    @include mix.margin($b:20px);
+    &--price {
+        @include mix.font-size(28px);
+        sup {
+            font-weight: normal;
+        }
+    }
+    &--images {
+        box-shadow: 0 0 20px rgba(0,0,0, 0.12);
+        border-radius: 10px;
+        img {
+            max-width: 100%;
+        }
+    }
+    &--info {
+        @include mix.flex(column, $gap: 16px);
+        &box {
+            @include mix.padding(20px);
+            @include mix.background(light);
+            border-radius: 10px;
+            &field {
+                @include mix.flex();
+                font-weight: 600;
+                &:not(:last-child) {
+                    @include mix.margin($b:10px);
+                }
+                &:before {
+                    content: attr(data-for);
+                    font-weight: normal;
+                    flex-basis: 130px;
+                }
+            }
+        }
+    }
+    &--name {
+        @include mix.font-size(24px);
+        @include mix.color(accent);
+        line-height: inherit;   
+    }
+    &--rating {
+        @include mix.flex(row,$ai:center,$gap:4px);
+        .fa {
+            &.filled {
+                @include mix.color(accent);
+            }
+            &.unfilled {
+                @include mix.color(text-light);
+            }
+        }
+    }
+}

@@ -9,3 +9,5 @@ export * from './lib/grid-column/grid-column.component';
 export * from './lib/articlebox/articlebox.component';
 export * from './lib/ui.component';
 export * from './lib/ui.component';
+export * from './lib/tabs/tabs.component';
+export * from './lib/tabs/tab/tab.component';

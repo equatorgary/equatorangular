@@ -10,6 +10,7 @@ import { DealerComponent } from './pages/dealer/dealer.component';
 import { WarrantyComponent } from './pages/warranty/warranty.component';
 import { ContactusComponent } from './pages/contactus/contactus.component';
 import { MediaComponent } from './pages/media/media.component';
+import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent, pathMatch: 'full' },
@@ -22,5 +23,6 @@ export const routes: Routes = [
     { path: 'reviews', component: ReviewsComponent},
     { path: 'dealer', component: DealerComponent},
     { path: 'warranty', component: WarrantyComponent},
-    { path: 'media', component: MediaComponent}
+    { path: 'media', component: MediaComponent},
+    { path: 'product', component: ProductDetailComponent}
 ];

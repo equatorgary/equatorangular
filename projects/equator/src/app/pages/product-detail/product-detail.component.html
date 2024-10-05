@@ -1,1 +1,70 @@
-<p>product-detail works!</p>
+
+<Container>
+<article class="eq-product">
+  <header class="eq-product--header">
+    <Grid desktop="2" mobile="1" gap="60px">
+      <Grid-col [colspan]="4">
+        <div class="eq-product--images">
+          <img src="https://ecotechz.com/multisite/admin/../admin/uploads/20230420075300.jpg" alt="equator product">
+        </div>
+      </Grid-col>
+      <Grid-col [colspan]="8">
+        <div class="eq-product--info">
+          <h1 class="eq-product--name">Equator 1.6 Cu.ft./15 Lbs White 110V Front Load Washer 15 Programs + Pet Cycle</h1>
+          <strong class="eq-product--price"><sup>$</sup>1,049<sup>.00</sup></strong>
+          <span class="eq-product--rating" *ngIf="rating">
+            <i
+            *ngFor="let star of stars"
+            class="fa fa-star"
+            [ngClass]="{'filled': star <= rating, 'unfilled': star > rating}"
+          ></i>
+          {{rating}}.0 ({{rating}})
+        </span>
+        <div class="eq-product--infobox">
+          <span class="eq-product--infoboxfield" data-for="Categories:">Washers, Laundry Products, Pets, Laundry</span>
+          <span class="eq-product--infoboxfield" data-for="Model:">826</span>
+          <span class="eq-product--infoboxfield" data-for="Price:">$1,049.00</span>
+        </div>
+        </div>
+      </Grid-col>
+    </Grid>
+   
+    
+  </header>
+  <Tabs>
+    <Tab heading="Description">
+      <p>Designed with some of the most premium features available, the Equator 1.62 cu.ft./15 lbs. White Super Washer Built-in/Freestanding 4 Memory Programs delivers an outstanding cleaning experience. Offering 16 total programs, and 12 wash programs (including Normal, Prewash, Allergen Cycle, and Pet Cycle), achieve the precise level of clean you desire with every run. The 826 model measures 33.5 x 23.5 x 21.85 (HxWxD in inches), and has a total capacity of 1.62 cu.ft. (15 lbs). There are two primary energy saving functions on this washer — the Delay Start and Automatic Water Level programs. One-of-a-kind wash cycle programs include Allergen Cycle (which eliminates dust mites, dander, and pollen), as well as Pet Cycle (which removes pesky pet hair from fabrics). Other noteworthy features found on the Equator 1.62 cu.ft./15 lbs. White Super Washer Built-in/Freestanding include a child lock, foam control, touch buttons, a color coded LED display, diagnostic sensors, and an anti-bacterial drum baffle.</p>
+    </Tab>
+    <Tab heading="Features">
+      <ul>
+        <li *ngFor="let item of ['12 Wash Cycle Programs','Color Coded LED Display','Pet Cycle','Allergen Cycle','4 Memory Programs','Child Lock']"></li>
+      </ul>
+    </Tab>
+    <Tab heading="Specification">
+      <table class="eq-product--table">
+        <tbody>
+          <tr *ngFor="let item of specification">
+            <td width="100">
+              {{item.name}}
+            </td>
+            <td>
+              {{item.value}}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </Tab>
+    <Tab heading="Documents">
+      <nav>
+        <a *ngFor="let item of documents" download href="{{item.link}}" target="_blank">
+          {{item.name}}
+        </a>
+      </nav>
+    </Tab>
+    <Tab heading="Videos"></Tab>
+    <Tab heading="FAQ's"></Tab>
+  </Tabs>
+</article>
+
+ 
+</Container>

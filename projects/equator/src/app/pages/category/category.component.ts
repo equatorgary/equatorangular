@@ -15,11 +15,11 @@ import { ProductboxComponent } from '../../../../../shared/src/lib/productbox/pr
 })
 export class CategoryComponent {
   productlist: any = [
-    {image: 'https://ecotechz.com/multisite/admin/uploads/20230410093247.jpg', name: 'Equator 110V Digital Ultra Compact Set Washer 1.57', price: '$1423.00', rating: 0},
-    {image: 'https://ecotechz.com/multisite/admin/uploads/20230329051254.jpg', name: 'All-In-One CONVERTIBLE Washer-Dryer 18lb/1.9cf SAN', price: '$1379.00', rating: 1},
-    {image: 'https://ecotechz.com/multisite/admin/uploads/20230329051254.jpg', name: 'All-In-One CONVERTIBLE Washer-Dryer 18lb/1.9cf SAN', price: '$1379.00', rating: 2},
-    {image: 'https://ecotechz.com/multisite/admin/uploads/20230329051254.jpg', name: 'All-In-One CONVERTIBLE Washer-Dryer 18lb/1.9cf SAN', price: '$1379.00', rating: 3},
-    {image: 'https://ecotechz.com/multisite/admin/uploads/20230329050516.jpg', name: 'All-In-One CONVERTIBLE Washer-Dryer 18lb/1.9cf SAN', price: '$1339.00', rating: 4}
+    {id: 1,category: 'categoryName',image: 'https://ecotechz.com/multisite/admin/uploads/20230410093247.jpg', name: 'Equator 110V Digital Ultra Compact Set Washer 1.57', price: '$1423.00', rating: 0},
+    {id: 2,category: 'categoryName',image: 'https://ecotechz.com/multisite/admin/uploads/20230329051254.jpg', name: 'All-In-One CONVERTIBLE Washer-Dryer 18lb/1.9cf SAN', price: '$1379.00', rating: 1},
+    {id: 3,category: 'categoryName',image: 'https://ecotechz.com/multisite/admin/uploads/20230329051254.jpg', name: 'All-In-One CONVERTIBLE Washer-Dryer 18lb/1.9cf SAN', price: '$1379.00', rating: 2},
+    {id: 4,category: 'categoryName',image: 'https://ecotechz.com/multisite/admin/uploads/20230329051254.jpg', name: 'All-In-One CONVERTIBLE Washer-Dryer 18lb/1.9cf SAN', price: '$1379.00', rating: 3},
+    {id: 5,category: 'categoryName',image: 'https://ecotechz.com/multisite/admin/uploads/20230329050516.jpg', name: 'All-In-One CONVERTIBLE Washer-Dryer 18lb/1.9cf SAN', price: '$1339.00', rating: 4}
   ]
   categoryName: string | null = null;
   categoryData: any = null;
