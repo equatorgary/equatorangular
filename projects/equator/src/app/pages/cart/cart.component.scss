@@ -1,0 +1,87 @@
+@use '../../../../../ui/style/base/mixins' as mix;
+.eq-cart {
+    &--table {
+        border:1px solid var(--border-color);
+        border-collapse: collapse;
+        width:100%;
+        margin-bottom: 20px;
+        th {
+            white-space: nowrap;
+        }
+        th,td {
+            @include mix.padding($x:16px, $y:12px);
+            border:1px solid var(--border-color);
+            line-height: 1.6;
+        }
+        thead {
+            th {
+                background:#dddedf;
+            }
+        }
+    }
+    &--quant {
+        @include mix.flex($w:nowrap,$gap:4px,$ai:center);
+        .form-control-sm {
+            @include mix.padding($y:5px,$x:10px);
+            width: 70px;
+        }
+        &act {
+            padding: 3px;
+            border-radius: 2px;
+            cursor: pointer;
+            &:is(:hover,:focus) {
+                background: var(--accent);
+                color: var(--white);
+            }
+        }
+    }
+    &--box {
+        @include mix.flex(column);
+        @include mix.padding(20px);
+        @include mix.margin($b:20px);
+        height: 100%;
+        border-radius: 10px;
+        background: rgba(34,34,34,0.05);
+        &title {
+            @include mix.font-size(14px);
+            @include mix.color(accent);
+        }
+    }
+    &--info {
+        &list {
+            list-style: none;
+            padding-left: 0;
+            li{
+                @include mix.margin($b:15px);
+                @include mix.font-size(14px);
+            }
+        }
+        &link {
+            @include mix.color(accent);
+        }
+    }
+    &--price {
+        &items {
+            @include mix.flex(column,$gap:10px);
+            list-style: none;
+            padding: 0;
+        }
+        &item {
+            @include mix.flex($jc:between);
+            @include mix.padding($b:10px);
+            &:not(:last-child) {
+                border-bottom: 1px solid var(--border-color);
+            }
+        }
+    }
+    &--input {
+        &box {
+            @include mix.margin($b:16px);
+            @include mix.padding(16px);
+            @include mix.background(white);
+            @include mix.flex(column, $gap:10px);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+        }
+    }
+}

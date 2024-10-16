@@ -25,13 +25,17 @@ max-width: max-content;
 &--light {
     color: var(--text-dark);
     background-color: var(--white);
-    border-color: var(--border);
+    border-color: var(--border-color);
     &:is(:hover,:focus){
         background-color: var(--text-light);
     }
 }
 &.mt-auto{
     margin-top: auto;
+}
+&s {
+    display: flex;
+    gap: 16px;
 }
 }
 [type=button], [type=reset], [type=submit], button {

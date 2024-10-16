@@ -1,0 +1,117 @@
+<eq-page-header title="Shopping Cart"></eq-page-header>
+<Container>
+    <table class="eq-cart--table">
+        <thead>
+            <tr>
+                <th>Photo</th>
+                <th>Product Info</th>
+                <th>Quantity</th>
+                <th>Unit Price</th>
+                <th>Discount</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><img src="https://ecotechz.com/multisite/admin/uploads/20230329050516.jpg" alt="product photo" height="100"></td>
+                <td>
+                    <strong>All-In-One CONVERTIBLE Washer-Dryer 18lb/1.9cf SANITIZE ALLERGEN Cycle 1400RPM in Red</strong>
+                    <div>Product Code: EZ 5500 CV</div>
+                </td>
+                <td>
+                    <div class="eq-cart--quant">
+                        <input type="number" class="form-control-sm" value="1">
+                        <span class="eq-cart--quantact"><i class="fa fa-sync"></i></span>
+                        <span class="eq-cart--quantact"><i class="fa fa-trash-alt"></i></span>
+                    </div>
+                </td>
+                <td>
+                    $1319
+                </td>
+                <td>0</td>
+                <td>$1319</td>
+            </tr>
+        </tbody>
+    </table>
+    <Grid desktop="2" mobile="1" gap="40px">
+        <Grid-col>
+            <div class="eq-cart--box">
+                <div class="eq-field">
+                    <label class="eq-field--label">Select Sipping</label>
+                    <select class="eq-field--select">
+                        <option data-charges="0" value="1">Standard Shipping FREE – Curbside delivery</option>
+						<option data-charges="219" value="3">Threshold – Delivery inside of main entrance of home</option>
+						<option data-charges="269" value="4">White Glove - (Room of Choice – No Installation)</option>
+                    </select>
+                </div>
+                <div class="eq-field">
+                    <label class="eq-field--label">Floor Choice (Charges)</label>
+                    <select class="eq-field--select">
+                        <option [value]="item" *ngFor="let item of [1,2,3,4,5,6,7,8,9,10]">{{item}}</option>
+                    </select>
+                </div>
+                <ul class="eq-cart--infolist">
+                    <li>
+                        <strong>Standard Shipping FREE </strong>  – Curbside delivery
+                    </li>
+                    <li>
+                        <strong>Threshold</strong>  – Delivery inside of main entrance of home
+                    </li>
+                    <li>
+                        <strong>Whiteglove </strong>  – (Room of Choice – No Installation)
+                        <a href="" class="eq-cart--infolink">View Shipping Charges</a>
+                    </li>
+                    <li>
+                        <strong>Note </strong>  – Free shipping not applicable for Hawaii and Alaska, $300 shipping charges. Delivery may take longer than usual.
+                    </li>
+                </ul>
+                <div class="eq-cart--inputbox">
+                    <span class="eq-cart--inputtitle">Add Coupon Code</span>
+                    <div class="eq-field--group">
+                        <input type="text" class="eq-field--input" placeholder="Enter">
+                        <button class="eq-btn eq-btn--light"><i class="fa fa-check"></i> Apply</button>
+                    </div>
+                </div>
+                <div class="eq-cart--inputbox">
+                    <span class="eq-cart--inputtitle">Add Referral Code</span>
+                    <div class="eq-field--group">
+                        <input type="text" class="eq-field--input" placeholder="Enter">
+                        <button class="eq-btn eq-btn--light"><i class="fa fa-check"></i> Apply</button>
+                    </div>
+                </div>
+            </div>
+        </Grid-col>
+        <Grid-col height="full">
+            <div class="eq-cart--box">
+                <h6 class="eq-cart--boxtitle">Cart Total</h6>
+                <ul class="eq-cart--priceitems">
+                    <li class="eq-cart--priceitem">
+                        <span class="eq-cart--pricename">Subtotal</span>
+                        <strong class="eq-cart--price">$1309</strong>
+                    </li>
+                    <li class="eq-cart--priceitem">
+                        <span class="eq-cart--pricename">Shipping Method</span>
+                        <strong class="eq-cart--price">Standard Shipping FREE – Curbside delivery</strong>
+                    </li>
+                    <li class="eq-cart--priceitem">
+                        <span class="eq-cart--pricename">Shipping Floor</span>
+                        <strong class="eq-cart--price">0th Floor</strong>
+                    </li>
+                    <li class="eq-cart--priceitem">
+                        <span class="eq-cart--pricename">Shipping</span>
+                        <strong class="eq-cart--price">$0</strong>
+                    </li>
+                    <li class="eq-cart--priceitem">
+                        <span class="eq-cart--pricename">Total</span>
+                        <strong class="eq-cart--price">$1309</strong>
+                    </li>
+                </ul>
+                <div class="d-flex eq-btns">
+                    <button class="eq-btn eq-btn--primary">Continue Shopping</button>
+                    <button class="eq-btn eq-btn--primary">Proceed to Checkout</button>
+                </div>
+            </div>
+        </Grid-col>
+    </Grid>
+    <eq-featured-products></eq-featured-products>
+</Container>

@@ -14,4 +14,5 @@ export * from './lib/best-selling/best-selling.component';
 export * from './lib/our-customers/our-customers.component';
 export * from './lib/feature-videos/feature-videos.component';
 export * from './lib/page-header/page-header.component';
+export * from './lib/featured-products/featured-products.component';
 
