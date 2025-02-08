@@ -15,4 +15,7 @@ export * from './lib/our-customers/our-customers.component';
 export * from './lib/feature-videos/feature-videos.component';
 export * from './lib/page-header/page-header.component';
 export * from './lib/featured-products/featured-products.component';
+export * from './lib/constant/api.config';
+export * from './lib/constant/constant';
+export * from './lib/http.service';
 
