@@ -25,13 +25,11 @@ export class HttpService {
   // }
 
   getAll(url:string) : Observable<any>{
-    debugger
    url = this.generateUrl(url);
    return this.http.get<any>(url,{ responseType: 'json' as 'json' })
   }
 
   registerUser(userData: any): Observable<any> {
-    debugger
     return this.http.post(`${environment._baseUri}/api/registerUser`, userData);
   }
 
@@ -41,13 +39,10 @@ export class HttpService {
   }
 
 
-  posts(url: string, data?: any): Observable<any> {
-    var headers = this.setHeaders();
-    withCredentials: true
-    url = this.generateUrl(url);
-    let body = JSON.stringify(data);
-
-    return this.http.post(url, body,)
+  postData(url: string, userData?: any): Observable<any> {
+    debugger
+     url = this.generateUrl(url);
+    return this.http.post(url, userData)
   }
 
   get<T>(url: string, id: number | string | null = null): Observable<any> {
