@@ -1,0 +1,18 @@
+<section class="ui-product-section" *ngIf="products.length">
+    <div class="ui-product-section__header">
+      <h2 class="ui-product-section__title">{{ title }}</h2>
+      <a *ngIf="seeAllLink"  class="ui-product-section__link">See All</a>
+    </div>
+  
+    <div class="ui-product-section__grid">
+      <Product-listbox
+        *ngFor="let product of products"
+        [title]="product.title"
+        [price]="product.price"
+        [originalPrice]="product.originalPrice"
+        [image]="product.image"
+        [rating]="product.rating"
+        [discountLabel]="product.discountLabel"
+      ></Product-listbox>
+    </div>
+  </section>

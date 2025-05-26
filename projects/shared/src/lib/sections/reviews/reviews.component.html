@@ -1,0 +1,47 @@
+<section class="ui-reviews">
+    <div class="ui-reviews-container">
+      <div class="ui-reviews-header">
+        <h2 class="ui-reviews-title">Customer Reviews</h2>
+        <a href="#" class="ui-reviews-see-all">See all</a>
+      </div>
+  
+      <div class="ui-reviews-content">
+        <button class="ui-reviews-nav-button ui-reviews-prev">
+          <i class="fa-solid fa-angle-left"></i>
+        </button>
+  
+        <div class="ui-reviews-card" *ngIf="reviews.length">
+          <div class="ui-reviews-rating-icon">
+            <div class="ui-reviews-green-badge">
+              <div class="ui-reviews-stars-group">
+                <i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+          </div>
+  
+          <div class="ui-reviews-details">
+            <h3 class="ui-reviews-product-name">{{ reviews[0].productName }}</h3>
+  
+            <div class="ui-reviews-stars">
+              <i *ngFor="let star of [1,2,3,4,5]" class="fa-solid fa-star"></i>
+            </div>
+  
+            <p class="ui-reviews-text">{{ reviews[0].content }}</p>
+  
+            <div class="ui-reviews-author">
+              <i class="fa-solid fa-user"></i>
+              <span>{{ reviews[0].authorName }}</span>
+            </div>
+          </div>
+        </div>
+  
+        <button class="ui-reviews-nav-button ui-reviews-next">
+          <i class="fa-solid fa-angle-right"></i>
+        </button>
+      </div>
+  
+      <div class="ui-reviews-quote-icon">
+        <i class="fa-solid fa-quote-right"></i>
+      </div>
+    </div>
+  </section>

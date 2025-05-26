@@ -1,0 +1,146 @@
+<header class="ui-header">
+    <!-- Top Header -->
+    <div class="ui-header__top">
+      <div class="ui-header__top-container">
+        <div class="ui-header__top-left">
+          <div class="ui-header__top-phone">
+            <i class="fa-solid fa-mobile-alt"></i>
+            <a href="tel:(800)-935-1955" class="ui-header__top-phone">
+              (800) 935-1955 (Tollfree)
+            </a>
+          </div>
+        </div>
+  
+        <div class="ui-header__top-right">
+          <div class="ui-header__top-link">Offers</div>
+          <div class="ui-header__top-link">Dealers</div>
+          <div class="ui-header__top-link">Reviews</div>
+          <div class="ui-header__top-link">Warranty</div>
+  
+          <div class="ui-header__top-dropdown">
+            <span>Media</span>
+            <i class="fa-solid fa-angle-down"></i>
+          </div>
+  
+          <div class="ui-header__top-language">
+            <i class="fa-brands fa-google"></i>
+            <div class="ui-header__top-dropdown">
+              <span>English</span>
+              <i class="fa-solid fa-angle-down"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Main Header -->
+    <div class="ui-header__main">
+      <div class="ui-header__main-container">
+        <div class="ui-header__main-left">
+          <div class="ui-header__main-logo">
+            <div class="ui-header__main-country">
+              <i class="fa-solid fa-angle-down"></i>
+            </div>
+            
+          </div>
+  
+          <div class="ui-header__mobile-toggle" (click)="toggleMobileMenu()">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+  
+          <nav class="ui-header__main-navigation">
+            <div class="ui-header__main-navigation-item">
+              <span>Products</span>
+              <i class="fa-solid fa-angle-down"></i>
+            </div>
+            <div class="ui-header__main-navigation-item">
+              <span>Application</span>
+              <i class="fa-solid fa-angle-down"></i>
+            </div>
+            <div class="ui-header__main-navigation-item">
+              <span>Accessories</span>
+            </div>
+            <div class="ui-header__main-navigation-item">
+              <span>Parts</span>
+            </div>
+            <div class="ui-header__main-navigation-item">
+              <span>Media</span>
+            </div>
+            <div class="ui-header__main-navigation-item">
+              <span>Warranty</span>
+            </div>
+          </nav>
+        </div>
+  
+        <div class="ui-header__main-search">
+          <i class="fa-solid fa-search"></i>
+          <input type="text" placeholder="Search..." />
+        </div>
+  
+        <div class="ui-header__main-actions">
+          <div class="ui-help-icon">
+            <i class="fa-regular fa-circle-question"></i>
+          </div>
+  
+          <div class="ui-header__main-divider"></div>
+  
+          <div class="ui-header__main-cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <div class="ui-header__main-cart-count">{{ cartCount }}</div>
+          </div>
+  
+          <div class="ui-header__main-divider"></div>
+  
+          <div class="ui-header__main-signin">
+            <i class="fa-solid fa-user ui-user-icon"></i>
+            <span>Sign In</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Mobile Menu -->
+    <div class="ui-header__mobile-menu" [class.open]="isMobileMenuOpen()">
+      <div class="ui-header__mobile-menu-close" (click)="toggleMobileMenu()">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+      <div class="ui-header__mobile-menu-links">
+        <div class="ui-header__mobile-menu-item">
+          <span>Products</span>
+          <i class="fa-solid fa-angle-down"></i>
+        </div>
+        <div class="ui-header__mobile-menu-item">
+          <span>Application</span>
+          <i class="fa-solid fa-angle-down"></i>
+        </div>
+        <div class="ui-header__mobile-menu-item">
+          <span>Accessories</span>
+        </div>
+        <div class="ui-header__mobile-menu-item">
+          <span>Parts</span>
+        </div>
+        <div class="ui-header__mobile-menu-item">
+          <span>Media</span>
+        </div>
+        <div class="ui-header__mobile-menu-item">
+          <span>Warranty</span>
+        </div>
+        <div class="ui-header__mobile-menu-item">
+          <span>Offers</span>
+        </div>
+        <div class="ui-header__mobile-menu-item">
+          <span>Dealers</span>
+        </div>
+        <div class="ui-header__mobile-menu-item">
+          <span>Reviews</span>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Overlay for Mobile Menu -->
+    <div 
+      class="ui-header__overlay" 
+      [class.open]="isMobileMenuOpen()"
+      (click)="toggleMobileMenu()"
+    ></div>
+  </header>

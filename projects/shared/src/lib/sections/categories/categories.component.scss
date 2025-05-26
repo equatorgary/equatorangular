@@ -1,0 +1,41 @@
+.ui-category-section {
+  padding: 3rem 2rem;
+  text-align: center;
+
+  &__title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+  }
+
+  &__grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(1, 1fr);
+
+    @media (min-width: 600px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  &__more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: #000;
+    cursor: pointer;
+    text-decoration: underline;
+    padding: 2rem;
+    font-size: 1rem;
+    background: none;
+
+    &:hover {
+      font-size: 1.5rem;
+    }
+  }
+}

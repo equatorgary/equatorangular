@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
+import { HeaderComponent } from '../header/header.component';
+import { FooterComponent } from '../footer/footer.component';
 
 @Component({
-  selector: 'lib-layout',
+  selector: 'Layout',
   standalone: true,
-  imports: [],
+  imports: [HeaderComponent,FooterComponent],
   templateUrl: './layout.component.html',
-  styleUrl: './layout.component.css'
+  styleUrl: './layout.component.scss'
 })
 export class LayoutComponent {
 

@@ -1,0 +1,15 @@
+<section class="ui-category-section">
+    <h2 class="ui-category-section__title">Categories</h2>
+    <div class="ui-category-section__grid">
+      <Category-box
+        *ngFor="let category of categories"
+        [title]="category.title"
+        [count]="category.count"
+        [image]="category.image"
+      ></Category-box>
+      <div class="ui-category-section__more" role="button" tabindex="0">
+        <span>Explore More</span>
+      </div>
+    </div>
+    
+  </section>
