@@ -1,0 +1,29 @@
+<div class="ui-product">
+    <img
+      [src]="image"
+      [alt]="title"
+      class="ui-product__image"
+    />
+  
+    <div class="ui-product__details">
+      <h3 class="ui-product__title" [title]="title">
+        {{ title }}
+      </h3>
+  
+      <div class="ui-product__pricing">
+        <span class="ui-product__price">${{ price }}</span>
+        <span class="ui-product__original-price">${{ originalPrice }}</span>
+      </div>
+  
+      <div class="ui-product__rating">
+        <ng-container *ngFor="let star of [].constructor(rating)">
+          <span class="ui-product__star">★</span>
+        </ng-container>
+      </div>
+  
+      <div class="ui-product__footer">
+        <button class="ui-product__buy-button">Buy Now</button>
+        <span class="ui-product__discount">{{ discountLabel }}</span>
+      </div>
+    </div>
+  </div>

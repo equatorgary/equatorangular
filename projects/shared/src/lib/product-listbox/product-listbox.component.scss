@@ -1,0 +1,83 @@
+.ui-product {
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    border: 1px solid #eee;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    background-color: #fff;
+    font-family: system-ui, sans-serif;
+  
+    &__image {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      background: #f9f9f9;
+    }
+  
+    &__details {
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      text-align: left;
+    }
+  
+    &__title {
+      font-size: 1rem;
+      font-weight: 600;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  
+    &__pricing {
+      display: flex;
+      gap: 0.5rem;
+      align-items: baseline;
+    }
+  
+    &__price {
+      color: #2e7d32;
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+  
+    &__original-price {
+      text-decoration: line-through;
+      color: #999;
+      font-size: 0.9rem;
+    }
+  
+    &__rating {
+      color: #ffb400;
+      font-size: 1rem;
+    }
+  
+    &__star {
+      margin-right: 2px;
+    }
+  
+    &__footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 0.5rem;
+    }
+  
+    &__buy-button {
+      background-color: #2e7d32;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: 2rem;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+    }
+  
+    &__discount {
+      font-weight: 600;
+      color: #000;
+      font-size: 0.9rem;
+    }
+  }

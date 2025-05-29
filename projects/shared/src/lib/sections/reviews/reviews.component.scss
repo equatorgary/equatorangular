@@ -1,0 +1,230 @@
+/* Customer Reviews Component Variables */
+:root {
+    --reviews-primary-green: #0d7c4a;
+    --reviews-light-yellow: #ffe7b1;
+    --reviews-badge-green: #dcffd2;
+    --reviews-text-dark: #151515;
+    --reviews-text-black: #000000;
+    --reviews-star-color: #ffb100;
+    --reviews-border-color: #0d7c4a;
+  }
+  
+  /* Main Container */
+  .ui-reviews {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+    padding: 60px 20px;
+    position: relative;
+  }
+  
+  .ui-reviews-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  /* Header Section */
+  .ui-reviews-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .ui-reviews-title {
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2.4px;
+    color: var(--reviews-text-dark);
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  .ui-reviews-see-all {
+    font-size: 20px;
+    color: var(--reviews-text-black);
+    text-decoration: underline;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  
+  /* Reviews Content */
+  .ui-reviews-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+  }
+  
+  /* Navigation Buttons */
+  .ui-reviews-nav-button {
+    width: 40px;
+    height: 50px;
+    background-color: var(--reviews-light-yellow);
+    border: 1px solid var(--reviews-primary-green);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--reviews-primary-green);
+    font-size: 16px;
+  }
+  
+  .ui-reviews-prev i {
+    transform: rotate(180deg);
+  }
+  
+  /* Review Card */
+  .ui-reviews-card {
+    display: flex;
+    padding: 30px;
+    background-color: #ffffff;
+    border: 1px solid var(--reviews-border-color);
+    border-radius: 10px;
+    max-width: 800px;
+    flex: 1;
+  }
+  
+  /* Rating Icon */
+  .ui-reviews-rating-icon {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 20px;
+    width: 200px;
+  }
+  
+  .ui-reviews-green-badge {
+    width: 63px;
+    height: 60px;
+    background-color: var(--reviews-badge-green);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .ui-reviews-stars-group {
+    color: #333333;
+    font-size: 30px;
+  }
+  
+  /* Review Details */
+  .ui-reviews-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .ui-reviews-product-name {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--reviews-primary-green);
+    letter-spacing: 2px;
+  }
+  
+  .ui-reviews-stars {
+    display: flex;
+    gap: 6px;
+    color: var(--reviews-star-color);
+    font-size: 13px;
+  }
+  
+  .ui-reviews-text {
+    font-size: 14px;
+    color: var(--reviews-text-dark);
+    letter-spacing: 1.4px;
+    line-height: 1.6;
+  }
+  
+  .ui-reviews-author {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--reviews-text-dark);
+  }
+  
+  .ui-reviews-author i {
+    font-size: 16px;
+    color: var(--reviews-primary-green);
+  }
+  
+  /* Quote Icon */
+  .ui-reviews-quote-icon {
+    position: absolute;
+    right: 0;
+    top: 60px;
+    width: 59px;
+    height: 59px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--reviews-primary-green);
+    border-radius: 50%;
+    color: var(--reviews-light-yellow);
+    font-size: 24px;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 992px) {
+    .ui-reviews-card {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .ui-reviews-rating-icon {
+      width: 100%;
+      padding-bottom: 20px;
+    }
+    
+    .ui-reviews-quote-icon {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .ui-reviews {
+      padding: 40px 15px;
+    }
+    
+    .ui-reviews-content {
+      gap: 15px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .ui-reviews-card {
+      padding: 20px 15px;
+    }
+    
+    .ui-reviews-nav-button {
+      width: 35px;
+      height: 45px;
+    }
+    
+    .ui-reviews-title {
+      font-size: 20px;
+    }
+    
+    .ui-reviews-see-all {
+      font-size: 16px;
+    }
+    
+    .ui-reviews-product-name {
+      font-size: 18px;
+    }
+    
+    .ui-reviews-text {
+      font-size: 12px;
+    }
+    
+    .ui-reviews-author {
+      font-size: 16px;
+    }
+  }

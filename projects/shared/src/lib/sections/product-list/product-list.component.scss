@@ -1,0 +1,39 @@
+.ui-product-section {
+    padding: 3rem 2rem;
+    font-family: system-ui, sans-serif;
+  
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+    }
+  
+    &__title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  
+    &__link {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #000;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  
+    &__grid {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(1, 1fr);
+  
+      @media (min-width: 600px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+  
+      @media (min-width: 1024px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  }
